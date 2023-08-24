@@ -9419,8 +9419,8 @@
       {
         "current": {
           "selected": false,
-          "text": "odf01-m24-lab-lon2.local",
-          "value": "odf01-m24-lab-lon2.local"
+          "text": "test.local",
+          "value": "test.local"
         },
         "definition": "label_values(node_uname_info{job=\"$job\"}, nodename)",
         "hide": 0,
