@@ -116,7 +116,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_ethtool_received_bytes_total{device=\"$device\",instance=\"$node\",job=\"prometheus\"}[1m]) * 8",
@@ -127,7 +127,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_ethtool_transmitted_bytes_total{device=\"$device\",instance=\"$node\",job=\"prometheus\"}[1m]) * 8",
@@ -225,7 +225,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_interrupts_total{instance=\"$node\", devices=~\".+comp0.+\"}[1m]) != 0",
@@ -236,7 +236,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_interrupts_total{instance=\"$node\", devices=~\".+ice.+\"}[1m]) != 0",
@@ -321,7 +321,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_cpu_seconds_total{mode=\"softirq\", instance=\"$node\", job=\"prometheus\"}[1m]) != 0",
@@ -431,7 +431,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_softirqs_cpu{instance=\"$node\",job=\"prometheus\",type=\"NET_RX\"}[1m]) != 0",
@@ -515,7 +515,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_softirqs_cpu{instance=\"$node\",job=\"prometheus\",type=\"NET_TX\"}[1m]) != 0",
@@ -613,7 +613,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_rx.{1,2}_packets\", device=\"$device\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:]) != 0",
@@ -699,7 +699,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_tx.{1,2}_packets\", device=\"$device\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:]) != 0",
@@ -785,7 +785,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_rx.{1,2}_xdp_drop\", device=\"$device\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:]) != 0",
@@ -870,7 +870,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_rx.{1,2}_xdp_redirect\", device=\"$device\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:]) != 0",
@@ -968,7 +968,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_ethtool_received_packets_phy{device=\"$device\",instance=\"$node\",job=\"prometheus\"}[1m]) - rate(node_ethtool_transmitted_packets_phy{device=\"$device\",instance=\"$node\",job=\"prometheus\"}[1m])",
@@ -1053,7 +1053,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_received_xdp_(drop|redirect)\", device=\"$device\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:])",
@@ -1065,7 +1065,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(label_replace({__name__=~\"node_ethtool_received_xsk_xdp_.+\", device=\"mlx0\", instance=\"$node\", job=\"prometheus\"},\"name_label\",\"$1\",\"__name__\", \"(.+)\")[1m:])",
@@ -1152,7 +1152,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_ethtool_received_packets_phy{device=\"$device\",instance=\"$node\",job=\"prometheus\"}[1m])",
@@ -1237,7 +1237,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "rate(node_ethtool_received_bytes_phy{device=\"$device\", instance=\"$node\"}[1m]) * 8",
@@ -1334,7 +1334,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1345,7 +1345,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1357,7 +1357,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1442,7 +1442,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1526,7 +1526,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1610,7 +1610,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
@@ -1626,7 +1626,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -1639,7 +1639,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Busy state of all CPU cores together",
           "fieldConfig": {
@@ -1717,7 +1717,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Busy state of all CPU cores together (5 min average)",
           "fieldConfig": {
@@ -1795,7 +1795,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Busy state of all CPU cores together (15 min average)",
           "fieldConfig": {
@@ -1872,7 +1872,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Non available RAM memory",
           "fieldConfig": {
@@ -1950,7 +1950,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Used Swap",
           "fieldConfig": {
@@ -2026,7 +2026,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Used Root FS",
           "fieldConfig": {
@@ -2103,7 +2103,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Total number of CPU cores",
           "fieldConfig": {
@@ -2178,7 +2178,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "System uptime",
           "fieldConfig": {
@@ -2253,7 +2253,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Total RootFS",
           "fieldConfig": {
@@ -2333,7 +2333,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Total RAM",
           "fieldConfig": {
@@ -2407,7 +2407,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "Total SWAP",
           "fieldConfig": {
@@ -2486,7 +2486,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -2591,7 +2591,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "sum by (instance)(rate(node_cpu_seconds_total{mode=\"system\",instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
           "format": "time_series",
@@ -2604,7 +2604,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "exemplar": true,
           "expr": "sum by (instance)(rate(node_cpu_seconds_total{mode='user',instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
@@ -2619,7 +2619,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "sum by (instance)(rate(node_cpu_seconds_total{mode='iowait',instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
           "format": "time_series",
@@ -2631,7 +2631,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "sum by (instance)(rate(node_cpu_seconds_total{mode=~\".*irq\",instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
           "format": "time_series",
@@ -2643,7 +2643,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "sum (rate(node_cpu_seconds_total{mode!='idle',mode!='user',mode!='system',mode!='iowait',mode!='irq',mode!='softirq',instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
           "format": "time_series",
@@ -2655,7 +2655,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "expr": "sum by (mode)(rate(node_cpu_seconds_total{mode='idle',instance=\"$node\",job=\"$job\"}[$__rate_interval])) * 100",
           "format": "time_series",
@@ -2727,7 +2727,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 2,
       "description": "Basic memory usage",
@@ -2891,7 +2891,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 2,
       "description": "",
@@ -3055,7 +3055,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 3,
       "description": "Disk space used of all filesystems mounted",
@@ -3175,7 +3175,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 2,
       "description": "",
@@ -3350,7 +3350,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "decimals": 3,
       "description": "",
@@ -3447,7 +3447,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -3482,7 +3482,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -3605,7 +3605,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -3737,7 +3737,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -3882,7 +3882,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4012,7 +4012,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4168,7 +4168,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4291,7 +4291,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4424,7 +4424,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4540,7 +4540,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4667,7 +4667,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4792,7 +4792,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -4924,7 +4924,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5048,7 +5048,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5182,7 +5182,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5307,7 +5307,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5404,7 +5404,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -5421,7 +5421,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -5528,7 +5528,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -5653,7 +5653,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5795,7 +5795,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 2,
           "fieldConfig": {
@@ -5895,7 +5895,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -5912,7 +5912,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -6033,7 +6033,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -6127,7 +6127,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -6235,7 +6235,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -6339,7 +6339,7 @@
       "collapsed": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -6359,7 +6359,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -6463,7 +6463,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -6560,7 +6560,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -6657,7 +6657,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -6783,7 +6783,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -6896,7 +6896,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -7007,7 +7007,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "fieldConfig": {
         "defaults": {
@@ -7117,7 +7117,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -7134,7 +7134,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7237,7 +7237,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7349,7 +7349,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7454,7 +7454,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7550,7 +7550,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7646,7 +7646,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7742,7 +7742,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -7853,7 +7853,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -7870,7 +7870,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -8018,7 +8018,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -8130,7 +8130,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -8227,7 +8227,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -8244,7 +8244,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -8338,7 +8338,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "fieldConfig": {
             "defaults": {
@@ -8489,7 +8489,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -8506,7 +8506,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "decimals": 3,
           "description": "",
@@ -8625,7 +8625,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -8724,7 +8724,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -8827,7 +8827,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -8926,7 +8926,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -9037,7 +9037,7 @@
       "collapsed": true,
       "datasource": {
         "type": "prometheus",
-        "uid": "2HF7lxxnz"
+        "uid": "PBFA97CFB590B2093"
       },
       "gridPos": {
         "h": 1,
@@ -9054,7 +9054,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -9151,7 +9151,7 @@
           "dashes": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "2HF7lxxnz"
+            "uid": "PBFA97CFB590B2093"
           },
           "description": "",
           "fieldConfig": {
@@ -9296,7 +9296,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "2HF7lxxnz"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "",
         "hide": 0,
@@ -9326,7 +9326,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "2HF7lxxnz"
+          "uid": "PBFA97CFB590B2093"
         },
         "definition": "label_values(node_uname_info{job=\"$job\"}, instance)",
         "hide": 0,
