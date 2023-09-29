@@ -872,8 +872,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -967,8 +966,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -10240,7 +10238,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "172.16.118.120:9100",
           "value": "172.16.118.120:9100"
         },
@@ -10286,7 +10284,6 @@
       },
       {
         "current": {
-          "isNone": true,
           "selected": false,
           "text": "None",
           "value": ""
