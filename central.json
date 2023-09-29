@@ -376,7 +376,6 @@
         "type": "prometheus",
         "uid": "PBFA97CFB590B2093"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -425,35 +424,9 @@
                 "value": 80
               }
             ]
-          },
-          "unit": "choose"
-        },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "CPU 4 RX"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
           }
-        ]
+        },
+        "overrides": []
       },
       "gridPos": {
         "h": 8,
@@ -461,7 +434,7 @@
         "x": 0,
         "y": 16
       },
-      "id": 363,
+      "id": 372,
       "options": {
         "legend": {
           "calcs": [],
@@ -483,12 +456,10 @@
           "editorMode": "code",
           "exemplar": false,
           "expr": "rate(node_softirqs_functions_total{instance=\"$node\", job=\"prometheus\", type=\"NET_RX\"}[1m]) != 0",
-          "hide": false,
           "instant": false,
-          "interval": "",
-          "legendFormat": "CPU {{cpu}} rx",
+          "legendFormat": "CPU {{cpu}}  RX",
           "range": true,
-          "refId": "B"
+          "refId": "A"
         }
       ],
       "title": "RX softirqs",
@@ -872,7 +843,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -966,7 +938,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1939,7 +1912,7 @@
             "h": 4,
             "w": 3,
             "x": 0,
-            "y": 76
+            "y": 84
           },
           "id": 20,
           "links": [],
@@ -2021,7 +1994,7 @@
             "h": 4,
             "w": 3,
             "x": 3,
-            "y": 76
+            "y": 84
           },
           "id": 155,
           "links": [],
@@ -2103,7 +2076,7 @@
             "h": 4,
             "w": 3,
             "x": 6,
-            "y": 76
+            "y": 84
           },
           "id": 19,
           "links": [],
@@ -2175,7 +2148,7 @@
             "h": 4,
             "w": 3,
             "x": 9,
-            "y": 76
+            "y": 84
           },
           "hideTimeOverride": false,
           "id": 16,
@@ -2270,7 +2243,7 @@
             "h": 4,
             "w": 3,
             "x": 12,
-            "y": 76
+            "y": 84
           },
           "id": 21,
           "links": [],
@@ -2350,7 +2323,7 @@
             "h": 4,
             "w": 3,
             "x": 15,
-            "y": 76
+            "y": 84
           },
           "id": 154,
           "links": [],
@@ -2425,7 +2398,7 @@
             "h": 2,
             "w": 2,
             "x": 18,
-            "y": 76
+            "y": 84
           },
           "id": 14,
           "links": [],
@@ -2505,7 +2478,7 @@
             "h": 2,
             "w": 4,
             "x": 20,
-            "y": 76
+            "y": 84
           },
           "hideTimeOverride": true,
           "id": 15,
@@ -2588,7 +2561,7 @@
             "h": 2,
             "w": 2,
             "x": 18,
-            "y": 78
+            "y": 86
           },
           "id": 23,
           "links": [],
@@ -2668,7 +2641,7 @@
             "h": 2,
             "w": 2,
             "x": 20,
-            "y": 78
+            "y": 86
           },
           "id": 75,
           "links": [],
@@ -2746,7 +2719,7 @@
             "h": 2,
             "w": 2,
             "x": 22,
-            "y": 78
+            "y": 86
           },
           "id": 18,
           "links": [],
@@ -3922,7 +3895,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 7
+            "y": 15
           },
           "hiddenSeries": false,
           "id": 136,
@@ -4053,7 +4026,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 7
+            "y": 15
           },
           "hiddenSeries": false,
           "id": 135,
@@ -4193,7 +4166,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 17
+            "y": 25
           },
           "hiddenSeries": false,
           "id": 191,
@@ -4354,7 +4327,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 17
+            "y": 25
           },
           "hiddenSeries": false,
           "id": 130,
@@ -4496,7 +4469,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 27
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 138,
@@ -4668,7 +4641,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 27
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 131,
@@ -4799,7 +4772,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 37
+            "y": 45
           },
           "hiddenSeries": false,
           "id": 70,
@@ -4944,7 +4917,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 37
+            "y": 45
           },
           "hiddenSeries": false,
           "id": 159,
@@ -5064,7 +5037,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 47
+            "y": 55
           },
           "hiddenSeries": false,
           "id": 129,
@@ -5199,7 +5172,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 47
+            "y": 55
           },
           "hiddenSeries": false,
           "id": 160,
@@ -5332,7 +5305,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 57
+            "y": 65
           },
           "hiddenSeries": false,
           "id": 140,
@@ -5476,7 +5449,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 57
+            "y": 65
           },
           "hiddenSeries": false,
           "id": 71,
@@ -5608,7 +5581,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 67
+            "y": 75
           },
           "hiddenSeries": false,
           "id": 128,
@@ -5754,7 +5727,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 67
+            "y": 75
           },
           "hiddenSeries": false,
           "id": 137,
@@ -5887,7 +5860,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 77
+            "y": 85
           },
           "hiddenSeries": false,
           "id": 132,
@@ -6013,7 +5986,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 88
+            "y": 96
           },
           "hiddenSeries": false,
           "id": 176,
@@ -6128,7 +6101,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 88
+            "y": 96
           },
           "hiddenSeries": false,
           "id": 22,
@@ -6262,7 +6235,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 98
+            "y": 106
           },
           "hiddenSeries": false,
           "id": 175,
@@ -6416,7 +6389,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 98
+            "y": 106
           },
           "hiddenSeries": false,
           "id": 307,
@@ -6546,7 +6519,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 10
+            "y": 18
           },
           "hiddenSeries": false,
           "id": 260,
@@ -6679,7 +6652,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 10
+            "y": 18
           },
           "hiddenSeries": false,
           "id": 291,
@@ -6777,7 +6750,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 20
+            "y": 28
           },
           "hiddenSeries": false,
           "id": 168,
@@ -6893,7 +6866,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 20
+            "y": 28
           },
           "hiddenSeries": false,
           "id": 294,
@@ -7873,7 +7846,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 12
+            "y": 20
           },
           "hiddenSeries": false,
           "id": 8,
@@ -7984,7 +7957,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 12
+            "y": 20
           },
           "hiddenSeries": false,
           "id": 7,
@@ -8108,7 +8081,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 22
+            "y": 30
           },
           "hiddenSeries": false,
           "id": 259,
@@ -8217,7 +8190,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 22
+            "y": 30
           },
           "hiddenSeries": false,
           "id": 306,
@@ -8317,7 +8290,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 32
+            "y": 40
           },
           "hiddenSeries": false,
           "id": 151,
@@ -8417,7 +8390,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 32
+            "y": 40
           },
           "hiddenSeries": false,
           "id": 308,
@@ -8517,7 +8490,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 42
+            "y": 50
           },
           "hiddenSeries": false,
           "id": 64,
@@ -8662,7 +8635,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 13
+            "y": 21
           },
           "hiddenSeries": false,
           "id": 158,
@@ -8830,7 +8803,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 13
+            "y": 21
           },
           "hiddenSeries": false,
           "id": 300,
@@ -8950,7 +8923,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 23
+            "y": 31
           },
           "hiddenSeries": false,
           "id": 302,
@@ -9077,7 +9050,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 23
+            "y": 31
           },
           "hiddenSeries": false,
           "id": 297,
@@ -9175,7 +9148,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 23
+            "y": 31
           },
           "hiddenSeries": false,
           "id": 298,
@@ -9374,7 +9347,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 15
+            "y": 23
           },
           "hiddenSeries": false,
           "id": 43,
@@ -9504,7 +9477,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 15
+            "y": 23
           },
           "hiddenSeries": false,
           "id": 41,
@@ -9607,7 +9580,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 25
+            "y": 33
           },
           "hiddenSeries": false,
           "id": 28,
@@ -9718,7 +9691,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 25
+            "y": 33
           },
           "hiddenSeries": false,
           "id": 219,
@@ -9821,7 +9794,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 35
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 44,
@@ -9966,7 +9939,7 @@
             "h": 10,
             "w": 12,
             "x": 0,
-            "y": 96
+            "y": 104
           },
           "hiddenSeries": false,
           "id": 40,
@@ -10067,7 +10040,7 @@
             "h": 10,
             "w": 12,
             "x": 12,
-            "y": 96
+            "y": 104
           },
           "hiddenSeries": false,
           "id": 157,
