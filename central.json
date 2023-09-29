@@ -1057,7 +1057,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1163,7 +1164,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1268,7 +1270,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1375,7 +1378,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1507,7 +1511,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1543,10 +1548,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "interval": "",
           "legendFormat": "Total process CPU",
+          "range": true,
           "refId": "A"
         },
         {
@@ -1554,11 +1561,13 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "Pkt parsing thr {{thread}}",
+          "range": true,
           "refId": "B"
         },
         {
@@ -1566,11 +1575,13 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "hide": false,
           "interval": "",
           "legendFormat": "Post process thr {{thread}}",
+          "range": true,
           "refId": "F"
         }
       ],
@@ -1622,7 +1633,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1658,10 +1670,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_parsing_thread{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "interval": "",
           "legendFormat": "Thread {{thread}}",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1713,7 +1727,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1749,10 +1764,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_process_cpu{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "interval": "",
           "legendFormat": "ODF process CPU",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -1804,7 +1821,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1840,10 +1858,12 @@
             "type": "prometheus",
             "uid": "PBFA97CFB590B2093"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"psutil\"}",
+          "expr": "ODF_processing_thread{instance=\"$odf_cpu\",job=\"prometheus\"}",
           "interval": "",
           "legendFormat": "Thread {{thread}}",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -10257,9 +10277,9 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "None",
-          "value": ""
+          "selected": true,
+          "text": "172.16.118.121:9102",
+          "value": "172.16.118.121:9102"
         },
         "datasource": {
           "type": "prometheus",
