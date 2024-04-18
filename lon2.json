@@ -26,6 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 1860,
   "graphTooltip": 0,
+  "id": 2,
   "links": [
     {
       "icon": "external link",
@@ -10283,7 +10284,7 @@
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
-        "regex": "/9102/",
+        "regex": "/172.*9102/",
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
@@ -10311,7 +10312,7 @@
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
-        "regex": "/^[^/][live0-1]+$/",
+        "regex": "/^[^/][live0-1 | ice1_1 | ice1_2]+$/",
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
