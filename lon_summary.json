@@ -1,0 +1,1036 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 3,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "pps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 6,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.3.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "interval": "",
+            "legendFormat": "lon1-drone1 ice1_1 rx pkts",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 ice1_1 rx pkts",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 ice1_1 rx pkts",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 ice1_1 rx pkts",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 ice1_1 rx pkts",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_unicast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_multicast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_received_broadcast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 ice1_1 rx pkts",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "LON Rx Packet Rate",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "pps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 7,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "8.3.3",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "interval": "",
+            "legendFormat": "lon1-drone1 ice1_1 tx pkts",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 ice1_1 tx pkts",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 ice1_1 tx pkts",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 ice1_1 tx pkts",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 ice1_1 tx pkts",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_unicast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_multicast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) + rate(node_ethtool_transmitted_broadcast_nic{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m])",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 ice1_1 tx pkts",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "LON Tx Packet Rate",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "bps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 8
+        },
+        "id": 4,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "interval": "",
+            "legendFormat": "lon1-drone1 ice1_1 rx bps",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 ice1_1 rx bps",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 ice1_1 rx bps",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 ice1_1 rx bps",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 ice1_1 rx bps",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_received_bytes_total{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 ice1_1 rx bps",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "LON Rx Bitrate",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "bps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 8
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.129.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "interval": "",
+            "legendFormat": "lon1-drone1 ice1_1 tx bps",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.129.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 ice1_1 tx bps",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.129.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 ice1_1 tx bps",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.134.21:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 ice1_1 tx bps",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.134.22:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 ice1_1 tx bps",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "rate(node_ethtool_transmitted_bytes_total{instance=\"10.248.134.23:9100\",device=\"ice1_1\",job=\"prometheus\"}[1m]) * 8",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 ice1_1 tx bps",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "LON Tx Bitrate",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 2,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 12,
+          "x": 0,
+          "y": 16
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.129.21:9102\",job=\"prometheus\"}",
+            "interval": "",
+            "legendFormat": "lon1-drone1 ch th {{thread}}",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.129.22:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 ch th {{thread}}",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.129.23:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 ch th {{thread}}",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.134.21:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 ch th {{thread}}",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.134.22:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 ch th {{thread}}",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_parsing_thread{instance=\"10.248.134.23:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 ch th {{thread}}",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "TLN Channel Threads",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 2,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 12,
+          "w": 12,
+          "x": 12,
+          "y": 16
+        },
+        "id": 3,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.129.21:9102\",job=\"prometheus\"}",
+            "interval": "",
+            "legendFormat": "lon1-drone1 pp th {{thread}}",
+            "range": true,
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.129.22:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone2 postproc {{thread}}",
+            "range": true,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.129.23:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon1-drone3 pp th {{thread}}",
+            "range": true,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.134.21:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone1 pp th {{thread}}",
+            "range": true,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.134.22:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone2 pp th {{thread}}",
+            "range": true,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "prometheus"
+            },
+            "editorMode": "code",
+            "exemplar": true,
+            "expr": "ODF_processing_thread{instance=\"10.248.134.23:9102\",job=\"prometheus\"}",
+            "hide": false,
+            "interval": "",
+            "legendFormat": "lon3-drone3 pp th {{thread}}",
+            "range": true,
+            "refId": "F"
+          }
+        ],
+        "title": "TLN PostProc Threads",
+        "type": "timeseries"
+      }
+    ],
+    "refresh": "5s",
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-3h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "LON Summary",
+    "uid": "a43d7378-4b17-4031-be98-078d7bba744e",
+    "version": 13,
+    "weekStart": ""
+  }
