@@ -26,7 +26,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 1860,
   "graphTooltip": 0,
-  "id": 1,
   "links": [
     {
       "icon": "external link",
@@ -417,7 +416,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -510,7 +510,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -628,7 +629,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -735,7 +737,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -840,7 +843,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -934,7 +938,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1052,7 +1057,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1158,7 +1164,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1263,7 +1270,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1370,7 +1378,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1502,7 +1511,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1623,7 +1633,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1716,7 +1727,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1809,7 +1821,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -10170,25 +10183,6 @@
       {
         "current": {
           "selected": false,
-          "text": "Prometheus",
-          "value": "Prometheus"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "label": "datasource",
-        "multi": false,
-        "name": "DS_PROMETHEUS",
-        "options": [],
-        "query": "prometheus",
-        "queryValue": "",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "type": "datasource"
-      },
-      {
-        "current": {
-          "selected": false,
           "text": "prometheus",
           "value": "prometheus"
         },
@@ -10196,7 +10190,7 @@
           "type": "prometheus",
           "uid": "prometheus"
         },
-        "definition": "",
+        "definition": "label_values(node_uname_info,job)",
         "hide": 0,
         "includeAll": false,
         "label": "Job",
@@ -10204,8 +10198,8 @@
         "name": "job",
         "options": [],
         "query": {
-          "query": "label_values(node_uname_info, job)",
-          "refId": "Prometheus-job-Variable-Query"
+          "query": "label_values(node_uname_info,job)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
         "regex": "",
@@ -10218,24 +10212,71 @@
       },
       {
         "current": {
+          "selected": true,
+          "text": "lon",
+          "value": "lon"
+        },
+        "definition": "label_values(environment)",
+        "description": "Site of servers",
+        "hide": 0,
+        "includeAll": false,
+        "label": "Site",
+        "multi": false,
+        "name": "site",
+        "options": [],
+        "query": {
+          "query": "label_values(environment)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
           "selected": false,
-          "text": "172.16.118.120:9100",
-          "value": "172.16.118.120:9100"
+          "text": "10.248.129.11",
+          "value": "10.248.129.11"
+        },
+        "definition": "label_values(node_uname_info{job=\"$job\",environment=\"$site\"},instance)",
+        "hide": 0,
+        "includeAll": false,
+        "label": "IP:",
+        "multi": false,
+        "name": "ip",
+        "options": [],
+        "query": {
+          "query": "label_values(node_uname_info{job=\"$job\",environment=\"$site\"},instance)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
+        },
+        "refresh": 1,
+        "regex": "/([^:]*).*/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "10.248.129.11:9100",
+          "value": "10.248.129.11:9100"
         },
         "datasource": {
           "type": "prometheus",
           "uid": "prometheus"
         },
-        "definition": "label_values(node_uname_info{job=\"$job\"}, instance)",
+        "definition": "label_values(node_uname_info{job=\"$job\",environment=\"$site\"},instance)",
         "hide": 0,
         "includeAll": false,
-        "label": "Host:",
+        "label": "Node:",
         "multi": false,
         "name": "node",
         "options": [],
         "query": {
-          "query": "label_values(node_uname_info{job=\"$job\"}, instance)",
-          "refId": "StandardVariableQuery"
+          "query": "label_values(node_uname_info{job=\"$job\",environment=\"$site\"},instance)",
+          "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
         "regex": "",
@@ -10248,31 +10289,11 @@
       },
       {
         "current": {
-          "selected": false,
-          "text": "[a-z]+|nvme[0-9]+n[0-9]+",
-          "value": "[a-z]+|nvme[0-9]+n[0-9]+"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "multi": false,
-        "name": "diskdevices",
-        "options": [],
-        "query": "",
-        "queryValue": "",
-        "skipUrlSync": false,
-        "type": "custom"
-      },
-      {
-        "current": {
-          "selected": false,
+          "selected": true,
           "text": "10.248.129.11:9102",
           "value": "10.248.129.11:9102"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
-        "definition": "label_values(instance)",
+        "definition": "label_values({environment=\"$site\"},instance)",
         "hide": 0,
         "includeAll": false,
         "label": "odf_cpu",
@@ -10280,7 +10301,7 @@
         "name": "odf_cpu",
         "options": [],
         "query": {
-          "query": "label_values(instance)",
+          "query": "label_values({environment=\"$site\"},instance)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -10292,14 +10313,10 @@
       {
         "current": {
           "selected": false,
-          "text": "live0",
-          "value": "live0"
+          "text": "ice1_1",
+          "value": "ice1_1"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
-        "definition": "label_values(device)",
+        "definition": "label_values({environment=\"$site\"},device)",
         "description": "devices on machine",
         "hide": 0,
         "includeAll": false,
@@ -10308,7 +10325,7 @@
         "name": "device",
         "options": [],
         "query": {
-          "query": "label_values(device)",
+          "query": "label_values({environment=\"$site\"},device)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -10320,14 +10337,10 @@
       {
         "current": {
           "selected": false,
-          "text": "tln-lon1-a21-control01.talon.hosting.thg.com",
-          "value": "tln-lon1-a21-control01.talon.hosting.thg.com"
+          "text": "tln-lon1-a21-control01",
+          "value": "tln-lon1-a21-control01"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "${DS_PROMETHEUS}"
-        },
-        "definition": "label_values(nodename)",
+        "definition": "label_values({environment=\"$site\"},nodename)",
         "hide": 0,
         "includeAll": false,
         "label": "hostname",
@@ -10335,11 +10348,11 @@
         "name": "hostname",
         "options": [],
         "query": {
-          "query": "label_values(nodename)",
+          "query": "label_values({environment=\"$site\"},nodename)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
-        "regex": "/lon1|lon3/",
+        "regex": "/([^.]*).*/",
         "skipUrlSync": false,
         "sort": 0,
         "type": "query"
