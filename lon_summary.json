@@ -677,7 +677,7 @@
           "refId": "A"
         }
       ],
-      "title": "TLN Kernel Thread",
+      "title": "TLN Kernel Threads",
       "type": "timeseries"
     }
   ],
@@ -692,6 +692,10 @@
           "selected": false,
           "text": "lon",
           "value": "lon"
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
         },
         "definition": "label_values(environment)",
         "description": "Site of servers",
